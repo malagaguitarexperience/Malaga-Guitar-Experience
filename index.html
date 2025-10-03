@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Básica</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background: #f5f5f5;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    img.logo {
+      width: 120px;
+      border-radius: 50%;
+    }
+    .linea {
+      margin: 15px 0;
+      padding: 15px;
+      background: white;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .explicacion {
+      display: none;
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+    .linea.active .explicacion {
+      display: block;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="Logotipo 2º MGE Transparente.png" alt="Logotipo" class="logo">
+    <h1>Bienvenido a mi Página</h1>
+  </header>
+
+  <div class="linea" onclick="toggleExplicacion(this)">
+    Línea 1: Mi proyecto
+    <div class="explicacion">
+      Este es un ejemplo de explicación que se despliega al hacer clic.
+    </div>
+  </div>
+
+  <div class="linea" onclick="toggleExplicacion(this)">
+    Línea 2: Más información
+    <div class="explicacion">
+      Puedes ver más en <a href="https://example.com" target="_blank">este enlace</a>.
+    </div>
+  </div>
+
+  <div class="linea" onclick="toggleExplicacion(this)">
+    Línea 3: Contacto
+    <div class="explicacion">
+      Escríbeme a <a href="mailto:malagaguitarexperience@gmail.com">malagaguitarexperience@gmail.com</a>.
+    </div>
+  </div>
+
+  <script>
+    function toggleExplicacion(element) {
+      element.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
